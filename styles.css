@@ -1,0 +1,144 @@
+/*body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}*/
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Cambiar el color de fondo a gris */
+}
+
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+.logo {
+  height: 50px;
+  margin-left: 20px;
+}
+
+nav {
+  flex-grow: 1; /* Esto hace que la barra de navegación ocupe todo el espacio disponible */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centra los elementos dentro de la lista */
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 60px; /* Aumenta la distancia entre los elementos */
+}
+
+
+nav ul li a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ddd;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #beedf5;
+}
+
+
+
+.container {
+  background: rgb(255, 255, 255);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 60px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  width: 100%;
+}
+
+footer p svg {
+  width: 20px; /* Tamaño del SVG */
+  height: 20px;
+  vertical-align: -4px; /* Mueve el SVG 3px hacia arriba */
+  margin-right: 5px; /* Espacio entre el SVG y el texto */
+}

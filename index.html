@@ -1,36 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="java.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VR3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="imagenes/LOGOVR3D2.ico">
 </head>
 <body>
+    <a href="mailto:info.VR3D@gmail.com" target="_blank" rel="noopener" title="Contáctanos" class="email-button">
+        <p class="email-cta">Contáctanos</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 193">
+            <path fill="#4285f4" d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z"/>
+            <path fill="#34a853" d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798z"/>
+            <path fill="#ea4335" d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z"/>
+            <path fill="#fbbc04" d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945z"/>
+            <path fill="#c5221f" d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23z"/>
+        </svg>
+    </a>
+
+    <a href="wa.me/+5491123442755" target="_blank" rel="noopener" title="Contáctanos " class="whatsapp-button">
+        <p class="whatsapp-cta">Contáctanos</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 258">
+            <defs>
+                <linearGradient id="logosWhatsappIcon0" x1="50%" x2="50%" y1="100%" y2="0%">
+                    <stop offset="0%" stop-color="#1faf38"/>
+                    <stop offset="100%" stop-color="#60d669"/>
+                </linearGradient>
+                <linearGradient id="logosWhatsappIcon1" x1="50%" x2="50%" y1="100%" y2="0%">
+                    <stop offset="0%" stop-color="#f9f9f9"/>
+                    <stop offset="100%" stop-color="#fff"/>
+                </linearGradient>
+            </defs>
+            <path fill="url(#logosWhatsappIcon0)" d="M5.463 127.456c-.006 21.677 5.658 42.843 16.428 61.499L4.433 252.697l65.232-17.104a123 123 0 0 0 58.8 14.97h.054c67.815 0 123.018-55.183 123.047-123.01c.013-32.867-12.775-63.773-36.009-87.025c-23.23-23.25-54.125-36.061-87.043-36.076c-67.823 0-123.022 55.18-123.05 123.004"/>
+            <path fill="url(#logosWhatsappIcon1)" d="M1.07 127.416c-.007 22.457 5.86 44.38 17.014 63.704L0 257.147l67.571-17.717c18.618 10.151 39.58 15.503 60.91 15.511h.055c70.248 0 127.434-57.168 127.464-127.423c.012-34.048-13.236-66.065-37.3-90.15C194.633 13.286 162.633.014 128.536 0C58.276 0 1.099 57.16 1.071 127.416m40.24 60.376l-2.523-4.005c-10.606-16.864-16.204-36.352-16.196-56.363C22.614 69.029 70.138 21.52 128.576 21.52c28.3.012 54.896 11.044 74.9 31.06c20.003 20.018 31.01 46.628 31.003 74.93c-.026 58.395-47.551 105.91-105.943 105.91h-.042c-19.013-.01-37.66-5.116-53.922-14.765l-3.87-2.295l-40.098 10.513z"/>
+            <path fill="#fff" d="M96.678 74.148c-2.386-5.303-4.897-5.41-7.166-5.503c-1.858-.08-3.982-.074-6.104-.074c-2.124 0-5.575.799-8.492 3.984c-2.92 3.188-11.148 10.892-11.148 26.561s11.413 30.813 13.004 32.94c1.593 2.123 22.033 35.307 54.405 48.073c26.904 10.609 32.379 8.499 38.218 7.967c5.84-.53 18.844-7.702 21.497-15.139c2.655-7.436 2.655-13.81 1.859-15.142c-.796-1.327-2.92-2.124-6.105-3.716s-18.844-9.298-21.763-10.361c-2.92-1.062-5.043-1.592-7.167 1.597c-2.124 3.184-8.223 10.356-10.082 12.48c-1.857 2.129-3.716 2.394-6.9.801c-3.187-1.598-13.444-4.957-25.613-15.806c-9.468-8.442-15.86-18.867-17.718-22.056c-1.858-3.184-.199-4.91 1.398-6.497c1.431-1.427 3.186-3.719 4.78-5.578c1.588-1.86 2.118-3.187 3.18-5.311c1.063-2.126.531-3.986-.264-5.579c-.798-1.593-6.987-17.343-9.819-23.64"/>
+        </svg>
+    </a>
+    
     <div class="App">
         <header>
             <img src="imagenes/LOGOVR3D.png" alt="VR3D Logo" class="logo">
             <nav>
                 <ul>
                     <li><a href="#about">Quienes Somos</a></li>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="#products">Productos</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#services" class="nav-link">Servicios</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#architecture">Arquitectura e ingeniería civil</a></li>
+                          <li><a href="#solar">Energía solar</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#products">Productos</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a href="#">Paneles fotovoltaicos</a></li>
+                            <li class="dropdown-item"><a href="#">Reguladores</a></li>
+                            <li class="dropdown-item"><a href="#">Inversores</a></li>
+                            <li class="dropdown-item"><a href="#">Baterías</a></li>
+                        </ul>
+                    </li>                    
                     <li><a href="#trainings">Capacitaciones</a></li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section id="about" class="container">
-                <h1>Quienes Somos</h1>
-                <p>VR3D es un estudio de ingeniería de Argentina, abocado a la elaboración de proyectos edilicios de arquitectura, y obras civiles en general.</p>
-                <p>Nuestro staff se compone de profesionales de distintas disciplinas, con la misión conjunta de contribuir a las mejoras individuales y colectivas en el uso racional y eficiente de la energía, ya sea a través de la construcción sustentable, de la generación distribuida de energía eléctrica o del aprovechamiento de la energía solar para calefacción y/o producción de agua caliente sanitaria.</p>
+            <section id="about">
+                <h1>Quienes somos</h1>
+                
+                <p>
+                    VR3D es un estudio de ingeniería de Argentina, abocado a la elaboración de proyectos edilicios de arquitectura y obras civiles en general.
+                </p>
+                <p>
+                    Nuestro staff se compone de profesionales de distintas disciplinas, con la misión conjunta de contribuir a las mejoras individuales y colectivas en el uso racional y eficiente de la energía, ya sea a través de la construcción sustentable, de la generación distribuida de energía eléctrica o del aprovechamiento de la energía solar para calefacción y/o producción de agua caliente sanitaria.
+                </p>
             </section>
-            <section id="services" class="container">
+        
+            <section id="services">
                 <h1>Nuestros Servicios</h1>
-                <ul>
-                    <li>Arquitectura e ingeniería civil:
+                <div class="services-container">
+                    <div class="service-column">
+                        <h2>Arquitectura e ingeniería civil</h2>
                         <ul>
                             <li>Proyectos</li>
                             <li>Planos</li>
@@ -39,47 +95,97 @@
                             <li>Elaboración de ingeniería básica e ingeniería de detalle</li>
                             <li>Renders, recorridos virtuales, experiencias inmersivas en realidad virtual</li>
                         </ul>
-                    </li>
-                    <li>Construcción en Steel Frame</li>
-                    <li>Energía solar:
+                    </div>
+                    <div class="service-column">
+                        <h2>Energía solar</h2>
                         <ul>
                             <li>Venta de paneles fotovoltaicos, inversores, baterías, etc.</li>
                             <li>Instalaciones fotovoltaicas industriales off-grid, on-grid e híbridas</li>
                             <li>Venta e Instalación de paneles termosolares</li>
                             <li>Bombas solares</li>
                         </ul>
-                    </li>
-                    <li>Emisión de DCI para instalaciones eléctricas, en las áreas de operación de Edenor y Edesur en CABA y Gran Buenos Aires</li>
-                    <li>Medición de la resistencia de los sistemas de PAT (Puesta a tierra)</li>
-                </ul>
+                    </div>
+                </div>
             </section>
-            <section id="products" class="container">
+
+            <section id="products">
                 <h1>Productos</h1>
-                <ul>
-                    <li>Paneles fotovoltaicos</li>
-                    <li>Reguladores</li>
-                    <li>Inversores</li>
-                    <li>Baterías</li>
-                </ul>
+                <div class="products-container">
+                    <div class="product-item">
+                        <h2>Paneles fotovoltaicos</h2>
+                        <div class="product-image">
+                            <p class="image-caption">Imagen Ilustrativa</p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <h2>Reguladores</h2>
+                        <div class="product-image">
+                            <p class="image-caption">Imagen Ilustrativa</p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <h2>Inversores</h2>
+                        <div class="product-image">
+                            <p class="image-caption">Imagen Ilustrativa</p>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <h2>Baterías</h2>
+                        <div class="product-image">
+                            <p class="image-caption">Imagen Ilustrativa</p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section id="trainings" class="container">
+
+            <section id="trainings">
                 <h1>Capacitaciones</h1>
                 <p>Aquí aparecerán los próximos eventos, ya sean presenciales o virtuales. Suscríbase a nuestro newsletter llenando el formulario de contacto.</p>
             </section>
+            
             <section id="contact" class="container">
                 <h1>Contacto</h1>
-                <form>
-                    <label for="name">Nombre*</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">E-mail*</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="phone">Celular</label>
-                    <input type="tel" id="phone" name="phone">
-                    <button type="submit">Enviar</button>
+                <form class="formularioContacto">
+                    <div class="form-group">
+                        <label for="name" class="elementosContacto required-field">Nombre</label>
+                        <input type="text" id="name" name="name" class="inputContacto" required placeholder="Tu nombre completo" maxlength="50" oninput="this.value = this.value.replace(/[^a-zA-Z ]/g, '')">
+                        <span class="error-message">Por favor ingresa tu nombre</span>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email" class="elementosContacto required-field">E-mail</label>
+                        <input type="email" id="email" name="email" class="inputContacto" required placeholder="ejemplo@correo.com" oninput="this.value = this.value.replace(/[^a-zA-Z0-9@._%+-]/g, '')">
+                        <span class="error-message">Por favor ingresa un email válido</span>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="phone" class="elementosContacto">Celular</label>
+                        <input type="tel" id="phone" name="phone" class="inputContacto" placeholder="Tu número de contacto" maxlength="17" oninput="this.value = this.value.replace(/[^0-9+]/g, '')">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="reason" class="elementosContacto">Motivo de su consulta</label>
+                        <textarea id="reason" name="reason" rows="5" placeholder="Escribe aquí tu mensaje..." maxlength="300"></textarea>
+                    </div>
+            
+                    <button type="submit" class="botonContacto">
+                        Enviar
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="svgEnviar">
+                            <g fill="none">
+                                <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/>
+                                <path fill="#fff" d="M20 4a2 2 0 0 1 1.995 1.85L22 6v12a2 2 0 0 1-1.85 1.995L20 20H4a2 2 0 0 1-1.995-1.85L2 18v-1h2v1h16V7.414l-6.94 6.94a1.5 1.5 0 0 1-2.007.103l-.114-.103L4 7.414V8H2V6a2 2 0 0 1 1.85-1.995L4 4zM6 13a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2zm12.586-7H5.414L12 12.586zM5 10a1 1 0 0 1 .117 1.993L5 12H2a1 1 0 0 1-.117-1.993L2 10z"/>
+                            </g>
+                        </svg>
+                    </button>
                 </form>
             </section>
+            
+            <!-- Vinculación del script -->
+            <script src="script.js"></script>
+            
+            
         </main>
-        <footer>
+        <footer id="site-footer">
             <p>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 193">
                     <path fill="#4285f4" d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455z"/>

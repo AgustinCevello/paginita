@@ -2,7 +2,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  background-color: #e5e4e4;
 }
 
 .App {
@@ -186,7 +186,7 @@ body, html {
 .product-image {
   width: 100%;
   height: 300px; /* Ajustar la altura de las imágenes */
-  background-color: #ddd; /* Color de fondo para las imágenes */
+  background-color: #919191; /* Color de fondo para las imágenes */
   border-radius: 10px;
   position: relative; /* Para posicionar el texto dentro de la imagen */
   display: flex;
@@ -355,6 +355,109 @@ nav ul li a:hover {
   border-radius: 3px; /* Bordes redondeados para una mejor estética */
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
 }
+
+/*boton noche dia*/
+/* From Uiverse.io by Galahhad */
+/* switch settings 👇 */
+.ui-switch {
+  /* switch */
+  --switch-bg: rgb(135, 150, 165);
+  --switch-width: 48px;
+  --switch-height: 20px;
+  /* circle */
+  --circle-diameter: 32px;
+  --circle-bg: rgb(0, 56, 146);
+  --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
+}
+
+.ui-switch input {
+  display: none;
+}
+
+.slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  background: var(--switch-bg);
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider .circle {
+  top: calc(var(--circle-inset) * -1);
+  left: 0;
+  width: var(--circle-diameter);
+  height: var(--circle-diameter);
+  position: absolute;
+  background: var(--circle-bg);
+  border-radius: inherit;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIgMGwtLjk4Mi45ODIgMS40NzMgMS40NzMuOTgyLS45ODItMS40NzMtMS40NzN6TTkuMzA1IDE2LjI1djIuMDgzaDEuMzg5VjE2LjI1aC0xLjM5eiIgLz4KPC9zdmc+");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -o-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+
+.slider .circle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: inherit;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  opacity: 0;
+}
+
+/* actions */
+.ui-switch input:checked+.slider .circle {
+  left: calc(100% - var(--circle-diameter));
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N2Zz4=");
+}
+
+.ui-switch input:active+.slider .circle::before {
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
+
+/* Añadir esta clase para alinear el switch a la derecha */
+.switch-container {
+  position: absolute;
+  right: 20px; /* Ajusta el espacio según sea necesario */
+  top: 50%;
+  transform: translateY(-50%); /* Centra verticalmente */
+}
+
+/* Asegúrate de que el contenedor del nav esté en posición relativa */
+nav {
+  position: relative;
+}
+
+/*boton noche dia*/
+
+
+
+
 
 /*-------------NAVAR-------------*/
 
@@ -759,3 +862,100 @@ footer p svg {
 
 
 
+/*--------------------------DARK MODE---------------------*/
+/* Estilos para el modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Estilos para el header en modo oscuro */
+body.dark-mode header {
+  background-color: #1e1e1e;
+}
+
+/* Estilos para el menú desplegable en modo oscuro */
+body.dark-mode .dropdown-menu {
+  background-color: #1e1e1e;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .dropdown:hover > a {
+  background-color: #333333;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos para las secciones principales en modo oscuro */
+body.dark-mode #about,
+body.dark-mode #services,
+body.dark-mode #products,
+body.dark-mode #trainings {
+  color: #e0e0e0;
+}
+
+body.dark-mode #about h1,
+body.dark-mode #services h1,
+body.dark-mode #products h1,
+body.dark-mode #trainings h1,
+body.dark-mode .service-column h2,
+body.dark-mode .product-item h2 {
+  color: #ffffff;
+}
+
+body.dark-mode #about p,
+body.dark-mode .service-column ul li,
+body.dark-mode #trainings p {
+  color: #b0b0b0;
+}
+
+/* Estilos para el contenedor de contacto en modo oscuro */
+body.dark-mode .container {
+  background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .container h1 {
+  color: #ffffff;
+}
+
+body.dark-mode .elementosContacto {
+  color: #b0b0b0;
+}
+
+body.dark-mode .inputContacto,
+body.dark-mode textarea {
+  background-color: #333333;
+  border-color: #444444;
+  color: #e0e0e0;
+}
+
+body.dark-mode .inputContacto:focus,
+body.dark-mode textarea:focus {
+  border-color: #83da80;
+  background-color: #444444;
+}
+
+/* Estilos para los botones flotantes en modo oscuro */
+body.dark-mode .email-button {
+  background-color: rgba(139, 183, 255, 0.8);
+}
+
+body.dark-mode .whatsapp-button {
+  background-color: rgba(37, 211, 101, 0.8);
+}
+
+/* Estilos para las imágenes de productos en modo oscuro */
+body.dark-mode .product-image {
+  background-color: #333333;
+}
+
+body.dark-mode .image-caption {
+  background-color: rgba(25, 25, 25, 0.7);
+  color: #e0e0e0;
+}
+
+/* Estilos para el footer en modo oscuro */
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+/*--------------------------DARK MODE---------------------*/

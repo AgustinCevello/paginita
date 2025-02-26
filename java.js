@@ -97,4 +97,37 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
         }
     });
+
+
+    // Función que se ejecuta cuando cambia el estado del interruptor
+    // Verificar que el script se está cargando
+    console.log("Script de tema cargado");
+
+    // Función para alternar el tema
+    function toggleTheme() {
+        console.log("Función toggleTheme ejecutada");
+        document.body.classList.toggle('dark-mode');
+        
+        // Comprobar si la clase se ha aplicado
+        if (document.body.classList.contains('dark-mode')) {
+            console.log("Modo oscuro activado");
+        } else {
+            console.log("Modo claro activado");
+        }
+    }
+
+    // Asegurarse de que el DOM está completamente cargado
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM cargado");
+        
+        // Encontrar el switch
+        const themeSwitch = document.querySelector('.ui-switch input');
+        
+        if (themeSwitch) {
+            console.log("Switch encontrado");
+            themeSwitch.addEventListener('change', toggleTheme);
+        } else {
+            console.log("ERROR: No se encontró el switch!");
+        }
+    });
 });

@@ -60,17 +60,19 @@ body, html {
   position: relative;
 }
 
+
 #about h1::after {
   content: '';
   position: absolute;
   bottom: -15px;
   left: 50%;
-  transform: translateX(-2%);
-  width: 80px;
-  height: 3px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
   background-color: #0B3954;
   border-radius: 2px;
 }
+
 
 /* Estilo para los párrafos */
 #about p {
@@ -137,6 +139,7 @@ body, html {
   position: relative;
   display: inline-block;
 }
+
 
 #services h1::after {
   content: "";
@@ -268,16 +271,20 @@ body, html {
   position: relative;
 }
 
+
 #products h1::after {
   content: '';
   position: absolute;
   bottom: -15px;
   left: 50%;
-  transform: translateX(-5%);
-  width: 80px;
-  height: 3px;
-  background-color: #0B3954; /* Azul marino */
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #0B3954;
+  border-radius: 2px;
 }
+
+
 
 /* Contenedor de productos en tres columnas */
 .products-container {
@@ -379,11 +386,13 @@ body, html {
   position: absolute;
   bottom: -15px;
   left: 50%;
-  transform: translateX(-10%);
-  width: 80px;
-  height: 3px;
-  background-color: #0B3954; /* Azul marino */
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #0B3954;
+  border-radius: 2px;
 }
+
 
 /* Estilo para los párrafos */
 #trainings p {
@@ -427,36 +436,44 @@ body, html {
 
 
 
-
-/*---------------------NAVAR---------------------*/
-nav {
-  flex-grow: 1; /* Esto hace que la barra de navegación ocupe todo el espacio disponible */
+/*---------------------NAVBAR RESPONSIVA---------------------*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-nav ul {
+.menu-container {
+  flex-grow: 1;
+}
+
+.nav-menu {
   list-style: none;
   display: flex;
-  justify-content: center; /* Centra los elementos dentro de la lista */
+  justify-content: center;
   padding: 0;
   margin: 0;
 }
 
-nav ul li {
-  margin: 0 60px; /* Aumenta la distancia entre los elementos */
+.nav-menu li {
+  margin: 0 60px;
 }
 
 /* Estilos de los enlaces */
-nav ul li a {
+.nav-menu li a {
   position: relative;
   color: white;
   text-decoration: none;
   font-size: 25px;
-  padding: 8px 0; /* Agregar padding para evitar que el hover cambie el tamaño */
-  font-weight: bold; /* Esto hace la letra más gruesa */
+  padding: 8px 0;
+  font-weight: bold;
+  display: block;
 }
 
 /* Efecto de subrayado al pasar el mouse */
-nav ul li a::before {
+.nav-menu li a::before {
   content: "";
   position: absolute;
   width: 0;
@@ -468,12 +485,12 @@ nav ul li a::before {
   transition: all 0.3s ease-in-out;
 }
 
-nav ul li a:hover::before {
+.nav-menu li a:hover::before {
   visibility: visible;
   width: 100%;
 }
 
-nav ul li a:hover {
+.nav-menu li a:hover {
   color: #4ce4fe96;
 }
 
@@ -487,35 +504,34 @@ nav ul li a:hover {
   display: none;
   position: absolute;
   background-color: #333333e9;
-  width: max-content; /* Se adapta al contenido más largo */
+  width: max-content;
   box-shadow: 0px 8px 16px #67b3ff71;
   z-index: 1;
   list-style-type: none;
-  padding: 5px 15px; /* Aumentamos el padding horizontal */
+  padding: 5px 15px;
   margin-top: 10px;
   border-radius: 10px;
-  white-space: nowrap; /* Evita que los elementos hagan salto de línea */
-  left: 0; /* Alinea con el borde izquierdo del elemento padre */
-  transform: none; /* Elimina la transformación anterior */
+  white-space: nowrap;
+  left: 0;
+  transform: none;
 }
 
 .dropdown-menu::before {
   content: "";
   position: absolute;
-  top: -15px; /* Aumenta la zona superior */
-  left: -15px; /* Aumenta la zona izquierda */
-  right: -15px; /* Aumenta la zona derecha */
-  height: 20px; /* Área invisible que mantiene el hover */
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  height: 20px;
   background: transparent;
 }
 
 .dropdown-menu li {
-  margin: 0; /* Elimina cualquier margen extra */
-  width: 100%; /* Asegura que el li ocupe todo el ancho disponible */
-  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+  margin: 0;
+  width: 100%;
+  text-align: left;
 }
 
-/* Estilo para los elementos del menú desplegable */
 .dropdown-menu li a {
   color: white;
   text-decoration: none;
@@ -523,13 +539,11 @@ nav ul li a:hover {
   padding: 8px 10px;
   display: block;
   position: relative;
-  width: 100%; /* Asegura que el enlace ocupe todo el ancho disponible */
-  box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
-  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
-  /* Sin font-weight: bold como solicitado */
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
 }
 
-/* Aplicamos el mismo efecto de subrayado al hover para el menú desplegable */
 .dropdown-menu li a::before {
   content: "";
   position: absolute;
@@ -547,29 +561,124 @@ nav ul li a:hover {
   width: 100%;
 }
 
-/* Aplicamos el mismo cambio de color al hover para el menú desplegable */
 .dropdown-menu li a:hover {
   color: #4ce4fe96;
 }
 
-/* Mostrar el submenú cuando se pasa el mouse sobre el elemento "Productos" */
+/* Mostrar el submenú en escritorio */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
 .dropdown:hover > a {
-  background-color: #2e2e2ead; /* Un tono más suave que el negro */
-  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.3); /* Sombra elegante */
-  border-radius: 3px; /* Bordes redondeados para una mejor estética */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+  background-color: #2e2e2ead;
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Mantener el hover activo cuando el menú desplegable está abierto */
 .dropdown:hover > a::before {
   visibility: visible;
   width: 100%;
 }
-/*-------------NAVAR-------------*/
+
+/* Botón del menú hamburguesa (oculto en escritorio) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* Estilos para pantallas pequeñas (responsive) */
+@media screen and (max-width: 992px) {
+  .menu-toggle {
+    display: flex;
+    margin-right: 20px;
+  }
+  
+  .menu-container {
+    flex-basis: 100%;
+    width: 100%;
+    order: 3;
+  }
+  
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-menu li {
+    margin: 10px 0;
+  }
+  
+  /* Ajuste de menús desplegables en móvil */
+  .dropdown-menu {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+    display: none;
+  }
+  
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown > a:after {
+    content: " ▼";
+    font-size: 12px;
+  }
+  
+  /* Eliminar efecto hover en móvil para los menús desplegables */
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+  
+  .dropdown.active:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

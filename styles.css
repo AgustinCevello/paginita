@@ -855,7 +855,6 @@ footer {
 footer p svg {
   width: 20px; /* Tamaño del SVG */
   height: 20px;
-  vertical-align: -4px; /* Mueve el SVG 3px hacia arriba */
   margin-right: 5px; /* Espacio entre el SVG y el texto */
 }
 

@@ -1,8 +1,13 @@
+/*-----------CUERPO----------------*/
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #e5e4e4;
+  background-color: #f2f2f2;
+  background-image: linear-gradient(to right, #e8e8e8 1px, transparent 1px),
+                    linear-gradient(to bottom, #e8e8e8 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center;
 }
 
 .App {
@@ -24,411 +29,17 @@ header {
 .logo {
   height: 100px;
   margin-left: 10px;
+  transition: all 0.3s ease-in-out;
 }
-
 
 body, html {
   overflow-x: hidden; /* Oculta el scroll horizontal */
   width: 100%;
 }
+/*-----------CUERPO----------------*/
 
 
 
-
-/*-----------------------------------TEXTOS------------------------------------*/
-/*----------------ABOUT----------------------*/
-/* Estilo general del contenedor */
-#about {
-  max-width: 800px;
-  margin: 100px auto;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 100;
-  color: #333;
-  padding: 0 20px;
-}
-
-/* Estilo para el título */
-#about h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-  color: #222;
-  letter-spacing: 2px;
-  position: relative;
-}
-
-
-#about h1::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 2px;
-  background-color: #0B3954;
-  border-radius: 2px;
-}
-
-
-/* Estilo para los párrafos */
-#about p {
-  font-family: 'Arial', serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.8;
-  margin-bottom: 25px;
-  color: #444;
-  text-align: left;
-  background-color: #f8f8f8;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #0B3954;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#about p:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-}
-
-/* Estilo para dispositivos móviles */
-@media (max-width: 768px) {
-  #about {
-    margin: 70px auto;
-  }
-  
-  #about h1 {
-    font-size: 2.5rem;
-  }
-  
-  #about p {
-    font-size: 1.1rem;
-    padding: 20px;
-  }
-}
-/*----------------ABOUT----------------------*/
-
-
-/*------------SERVICIOS-------------*/
-/* Estilo general del contenedor */
-#services {
-  max-width: 1200px;
-  margin: 100px auto;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  padding: 30px 20px;
-  background-color: #f9f9f9;
-  border-radius: 15px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
-}
-
-/* Estilo para el título */
-#services h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-  color: #222;
-  letter-spacing: 2px;
-  position: relative;
-  display: inline-block;
-}
-
-
-#services h1::after {
-  content: "";
-  position: absolute;
-  width: 60%;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, #333, transparent);
-  bottom: -10px;
-  left: 20%;
-}
-
-/* Contenedor de servicios en dos columnas */
-.services-container {
-  display: flex;
-  justify-content: space-between;
-  text-align: left;
-  gap: 60px;
-}
-
-/* Estilo para cada columna de servicios */
-.service-column {
-  width: 45%;
-  background-color: white;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-column:hover {
-  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo para los subtítulos */
-.service-column h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 1.7rem;
-  margin-bottom: 25px;
-  color: #222;
-  text-align: center;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #eaeaea;
-  position: relative;
-}
-
-.service-column h2::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 3px;
-  background-color: #555;
-  bottom: -2px;
-  left: 50%;
-  transform: translateX(-5%);
-}
-
-/* Estilo para las listas */
-.service-column ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-/* Estilo para los elementos de la lista */
-.service-column ul li {
-  font-family: 'Arial', serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #444;
-  padding: 12px 15px;
-  border-radius: 8px;
-  position: relative;
-  background-color: #f8f8f8;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-}
-
-.service-column ul li:hover {
-  background-color: #efefef;
-  transform: translateX(5px);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.service-column ul li::before {
-  content: "•";
-  color: #555;
-  font-weight: bold;
-  display: inline-block; 
-  width: 20px;
-  margin-right: 10px;
-  font-size: 1.5rem;
-}
-
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
-  .services-container {
-    flex-direction: column;
-  }
-  
-  .service-column {
-    width: 100%;
-  }
-}
-/*------------SERVICIOS-------------*/
-
-/*------------PRODUCTOS-------------*/
-/* Estilo general del contenedor */
-#products {
-  max-width: 1200px;
-  margin: 50px auto;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 100;
-  color: #333;
-}
-
-/* Estilo para el título */
-#products h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-  color: #222;
-  letter-spacing: 2px;
-  position: relative;
-}
-
-
-#products h1::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 2px;
-  background-color: #0B3954;
-  border-radius: 2px;
-}
-
-
-
-/* Contenedor de productos en tres columnas */
-.products-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  text-align: left;
-}
-
-/* Estilo para cada producto */
-.product-item {
-  width: 100%;
-  margin-bottom: 40px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-}
-
-.product-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Estilo para los subtítulos */
-.product-item h2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin: 20px 0;
-  color: #222;
-  text-align: center;
-}
-
-/* Estilo para las imágenes de los productos */
-.product-image {
-  width: 100%;
-  height: 250px;
-  background: linear-gradient(135deg, #e0e0e0, #919191);
-  border-radius: 10px 10px 0 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Estilo para el texto dentro de las imágenes */
-.image-caption {
-  font-family: 'Arial', serif;
-  font-size: 1.2rem;
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 8px 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-/* Media queries para responsive */
-@media (max-width: 1000px) {
-  .products-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .products-container {
-    grid-template-columns: 1fr;
-  }
-}
-/*------------PRODUCTOS-------------*/
-
-/*------------CAPACITACIONES-------------*/
-/* Estilo general del contenedor */
-#trainings {
-  max-width: 800px;
-  margin: 120px auto 50px auto;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 100;
-  color: #333;
-}
-
-/* Estilo para el título */
-#trainings h1 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-bottom: 40px;
-  color: #222;
-  letter-spacing: 2px;
-  position: relative;
-}
-
-#trainings h1::after {
-  content: '';
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 2px;
-  background-color: #0B3954;
-  border-radius: 2px;
-}
-
-
-/* Estilo para los párrafos */
-#trainings p {
-  font-family: 'Arial', serif;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 1.8;
-  margin-bottom: 15px;
-  color: #444;
-  text-align: left;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Botón con estilo azul marino */
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  margin-top: 30px;
-  background-color: #0B3954; /* Azul marino */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #0a2d40;
-}
-/*------------CAPACITACIONES-------------*/
-
-/*----------------------------------------TEXTOS----------------------------------------*/
 
 
 
@@ -443,10 +54,12 @@ body, html {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  position: relative; /* Añadido para crear un contexto de apilamiento */
 }
 
 .menu-container {
   flex-grow: 1;
+  position: relative; /* Añadido para asegurar que los elementos hijos con z-index funcionen correctamente */
 }
 
 .nav-menu {
@@ -506,7 +119,7 @@ body, html {
   background-color: #333333e9;
   width: max-content;
   box-shadow: 0px 8px 16px #67b3ff71;
-  z-index: 1;
+  z-index: 1001; /* Valor aumentado para asegurar que aparezca por encima de otros elementos */
   list-style-type: none;
   padding: 5px 15px;
   margin-top: 10px;
@@ -601,31 +214,62 @@ body, html {
 
 /* Estilos para pantallas pequeñas (responsive) */
 @media screen and (max-width: 992px) {
+  /* Ocultar logo cuando el menú hamburguesa está visible */
+  header > a > img.logo {
+    display: none;
+  }
+  
+  /* Eliminar fondo gris de la navbar */
+  header {
+    background-color: transparent;
+    padding: 10px 0;
+    position: relative; /* Añadido para crear un contexto de apilamiento */
+  }
+  
+  .navbar {
+    background-color: transparent;
+    justify-content: flex-start;
+  }
+  
+  /* Mover menú hamburguesa a la izquierda */
   .menu-toggle {
     display: flex;
-    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; /* Valor aumentado para asegurar que aparezca por encima de otros elementos */
   }
   
   .menu-container {
-    flex-basis: 100%;
-    width: 100%;
-    order: 3;
+    width: auto;
+    position: relative;
   }
   
   .nav-menu {
     display: none;
     flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
+    padding: 0;
+    margin: 0;
+    align-items: flex-start;
   }
   
   .nav-menu.active {
     display: flex;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 5px;
+    width: auto;
+    min-width: 200px;
+    z-index: 1000; /* Valor aumentado para asegurar que aparezca por encima de otros elementos */
   }
   
   .nav-menu li {
-    margin: 10px 0;
+    margin: 8px 10px;
+    width: 100%;
   }
   
   /* Ajuste de menús desplegables en móvil */
@@ -634,9 +278,11 @@ body, html {
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: none;
     width: 100%;
-    margin-top: 0;
-    border-radius: 0;
+    margin-top: 5px;
+    border-radius: 5px;
     display: none;
+    padding: 5px;
+    z-index: 1001; /* Valor aumentado para los submenús */
   }
   
   .dropdown.active .dropdown-menu {
@@ -656,7 +302,564 @@ body, html {
   .dropdown.active:hover .dropdown-menu {
     display: block;
   }
+  
+  .dropdown-menu li {
+    margin: 5px 0;
+  }
+  
+  .dropdown-menu li a {
+    padding: 5px;
+    font-size: 20px;
+  }
 }
+/*------------NAVAR RESPONSIVE---------------*/
+
+
+
+
+
+
+
+/*-----------------------------------TEXTOS------------------------------------*/
+/*----------------ABOUT----------------------*/
+/* Estilo general del contenedor */
+#about {
+  max-width: 1200px; /* Aumentado para coincidir con la sección de servicios */
+  margin: 100px auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 30px 20px;
+  border-radius: 15px;
+}
+
+/* Estilo para el título */
+#about h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #222;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+#about h1::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #0B3954, transparent);
+  bottom: -15px;
+  left: 20%;
+}
+
+/* Contenedor para párrafos */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo para los párrafos */
+#about p {
+  font-family: 'Arial', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 0;
+  color: #444;
+  text-align: left;
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #0B3954;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#about p:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+#about p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #0B3954, #4682B4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#about p:hover::before {
+  opacity: 1;
+}
+
+/* Efectos decorativos */
+#about::before,
+#about::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: transparent; /* Cambiado de rgba(11, 57, 84, 0.03) a transparent */
+  z-index: -1;
+  box-shadow: none; /* Añadido para eliminar la sombra */
+}
+
+#about::before {
+  top: -50px;
+  left: -50px;
+}
+
+#about::after {
+  bottom: -50px;
+  right: -50px;
+}
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 768px) {
+  #about {
+    margin: 70px auto;
+    padding: 25px 15px;
+  }
+  
+  #about h1 {
+    font-size: 2.5rem;
+  }
+  
+  #about p {
+    font-size: 1.2rem;
+    padding: 20px;
+  }
+}
+/*----------------ABOUT----------------------*/
+
+
+
+
+/*------------SERVICIOS-------------*/
+/* Estilo general del contenedor */
+#services {
+  max-width: 1200px;
+  margin: 100px auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden; /* Evita que el contenido sobresalga del contenedor */
+}
+
+/* Estilo para el título */
+#services h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #222;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+#services h1::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #333, transparent);
+  bottom: -10px;
+  left: 20%;
+}
+
+/* Contenedor de servicios en columnas verticales */
+.services-container {
+  display: flex;
+  flex-direction: column; /* Cambiado de row a column para apilar verticalmente */
+  text-align: left;
+  gap: 60px;
+  width: 100%; /* Asegura que el contenedor no sobrepase el ancho del padre */
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+/* Estilo para cada columna de servicios */
+.service-column {
+  width: 100%; /* Cambiado de 45% a 100% para ocupar todo el ancho */
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.service-column:hover {
+  box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para los subtítulos */
+.service-column h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin-bottom: 25px;
+  color: #222;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eaeaea;
+  position: relative;
+}
+
+.service-column h2::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #555;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-5%);
+}
+
+/* Estilo para las listas */
+.service-column ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Elimina márgenes por defecto */
+  width: 100%; /* Asegura que la lista no sobrepase el ancho del padre */
+}
+
+/* Estilo para los elementos de la lista */
+.service-column ul li {
+  font-family: 'Arial', serif;
+  font-size: 1.3rem; /* Aumentado de 1.2rem a 1.3rem */
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #444;
+  padding: 12px 15px;
+  border-radius: 8px;
+  position: relative;
+  background-color: #f8f8f8;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box; /* Incluye padding y border en el ancho total */
+  width: 100%; /* Asegura que los elementos li no sobrepasen el ancho del padre */
+}
+
+.service-column ul li:hover {
+  background-color: #efefef;
+  transform: translateX(5px);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.service-column ul li::before {
+  content: "•";
+  color: #555;
+  font-weight: bold;
+  display: inline-block; 
+  width: 20px;
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+/* Media query para dispositivos móviles - ya no necesario porque ahora siempre están en columna */
+@media (max-width: 768px) {
+  .service-column {
+    width: 100%;
+  }
+  
+  #services {
+    padding: 30px 15px; /* Reduce el padding en dispositivos móviles */
+  }
+  
+  .service-column ul li {
+    font-size: 1.2rem; /* Ajusta el tamaño de fuente en dispositivos móviles */
+  }
+}
+/*------------SERVICIOS-------------*/
+
+/*------------PRODUCTOS-------------*/
+/* Estilo general del contenedor */
+#products {
+  max-width: 1200px;
+  margin: 80px auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  padding: 0 20px;
+}
+
+/* Estilo para el título */
+#products h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  color: #1a1a1a;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+#products h1::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #0B3954, #4682B4);
+  border-radius: 2px;
+}
+
+/* Contenedor de productos en tres columnas */
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: left;
+  margin-top: 40px;
+}
+
+/* Estilo para cada producto */
+.product-item {
+  width: 100%;
+  margin-bottom: 40px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #0B3954, #4682B4);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.product-item:hover::before {
+  transform: scaleX(1);
+}
+
+/* Estilo para los subtítulos */
+.product-item h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin: 0;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 20px 15px 25px;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.product-item:hover h2 {
+  color: #0B3954;
+}
+
+/* Estilo para las imágenes de los productos */
+.product-image {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+  border-radius: 16px 16px 0 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.product-item:hover .product-image {
+  transform: scale(1.02);
+}
+
+/* Estilo para el texto dentro de las imágenes */
+.image-caption {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.product-item:hover .image-caption {
+  background-color: rgba(11, 57, 84, 0.9);
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* Icons for products - optional */
+.product-item::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f185"; /* Solar panel icon - change as needed */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: rgba(11, 57, 84, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#paneles::after { content: "\f185"; } /* Solar panel */
+#reguladores::after { content: "\f1de"; } /* Sliders */
+#inversores::after { content: "\f0e7"; } /* Lightning bolt */
+#baterias::after { content: "\f241"; } /* Battery */
+
+.product-item:hover::after {
+  opacity: 1;
+}
+
+/* Media queries para responsive */
+@media (max-width: 1000px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  #products h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .products-container {
+    grid-template-columns: 1fr;
+  }
+  
+  #products h1 {
+    font-size: 2.5rem;
+  }
+  
+  .product-image {
+    height: 250px;
+  }
+}
+/*------------PRODUCTOS-------------*/
+
+/*------------CAPACITACIONES-------------*/
+/* Estilo general del contenedor */
+#trainings {
+  max-width: 800px;
+  margin: 120px auto 50px auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+  color: #333;
+}
+
+/* Estilo para el título */
+#trainings h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #222;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+#trainings h1::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #0B3954;
+  border-radius: 2px;
+}
+
+
+/* Estilo para los párrafos */
+#trainings p {
+  font-family: 'Arial', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #444;
+  text-align: left;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Botón con estilo azul marino */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  margin-top: 30px;
+  background-color: #0B3954; /* Azul marino */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0a2d40;
+}
+/*------------CAPACITACIONES-------------*/
+
+/*----------------------------------------TEXTOS----------------------------------------*/
+
+
+
+
+
+
 
 
 

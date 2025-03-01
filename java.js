@@ -100,15 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-
-
-
-
-
-    //navar responsive
+    //-------------------------navar responsive-------------------------
 
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -158,6 +150,90 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Create and animate particles
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('particles-container');
+  const particleCount = 50;
+  
+  // Create particles
+  for (let i = 0; i < particleCount; i++) {
+    createParticle();
+  }
+  
+  function createParticle() {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    
+    // Random position
+    const posX = Math.random() * 100;
+    const posY = Math.random() * 100;
+    particle.style.left = posX + 'vw';
+    particle.style.top = posY + 'vh';
+    
+    // Random size
+    const size = Math.random() * 3 + 2;
+    particle.style.width = size + 'px';
+    particle.style.height = size + 'px';
+    
+    // Random opacity
+    particle.style.opacity = Math.random() * 0.5 + 0.3;
+    
+    // Add to container
+    container.appendChild(particle);
+    
+    // Animate
+    animateParticle(particle);
+  }
+  
+  function animateParticle(particle) {
+    // Random animation duration
+    const duration = Math.random() * 30 + 15;
+    particle.style.animation = `float ${duration}s infinite ease-in-out`;
+    
+    // Recreate particle when animation ends to refresh position
+    setTimeout(() => {
+      particle.remove();
+      createParticle();
+    }, duration * 1000);
+  }
+  
+  // Create subtle parallax effect on scroll
+  window.addEventListener('scroll', function() {
+    const scrolled = window.scrollY;
+    const bubbles = document.querySelectorAll('.bubble');
+    
+    bubbles.forEach((bubble, index) => {
+      const speed = 0.1 + (index * 0.05);
+      const yPos = -(scrolled * speed);
+      bubble.style.transform = `translateY(${yPos}px)`;
+    });
+  });
+});
+
+
+
+
+
+
+
+
 
 
 });

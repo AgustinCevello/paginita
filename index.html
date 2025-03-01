@@ -45,56 +45,51 @@
     
     <div class="App">
         <header>
-            <a href="index.html">
+            <a href="index.html" class="logo-container">
                 <img src="imagenes/LOGOVR3D.png" alt="VR3D Logo" class="logo">
             </a>
             <nav class="navbar">
-                <div class="logo">
-                    <!-- Puedes agregar tu logo aquí si lo tienes -->
-                </div>
-                
-                <!-- Botón hamburguesa para móviles -->
-                <div class="menu-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                
                 <div class="menu-container">
+                    <!-- Botón hamburguesa para móviles -->
+                    <div class="menu-toggle">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    
                     <ul class="nav-menu">
-                        <li><a href="#about">Quiénes Somos</a></li>
-                        <li class="dropdown">
+                        <li class="menu-toggle-item"><a href="#about">Quiénes Somos</a></li>
+                        <li class="dropdown menu-toggle-item">
                             <a href="#services" class="nav-link">Servicios</a>
                             <ul class="dropdown-menu">
                                 <li><a href="#architecture">Arquitectura e ingeniería civil</a></li>
                                 <li><a href="#solar">Energía solar</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
+                        <li class="dropdown menu-toggle-item">
                             <a href="#products">Productos</a>
                             <ul class="dropdown-menu">
-                                <li class="dropdown-item"><a href="#">Paneles fotovoltaicos</a></li>
-                                <li class="dropdown-item"><a href="#">Reguladores</a></li>
-                                <li class="dropdown-item"><a href="#">Inversores</a></li>
-                                <li class="dropdown-item"><a href="#">Baterías</a></li>
+                                <li class="dropdown-item"><a href="#paneles">Paneles fotovoltaicos</a></li>
+                                <li class="dropdown-item"><a href="#reguladores">Reguladores</a></li>
+                                <li class="dropdown-item"><a href="#inversores">Inversores</a></li>
+                                <li class="dropdown-item"><a href="#baterias">Baterías</a></li>
                             </ul>
-                        </li>                    
-                        <li><a href="#trainings">Capacitaciones</a></li>
-                        <li><a href="#contact">Contacto</a></li>
+                        </li>           
+                        <li class="menu-toggle-item"><a href="#trainings">Capacitaciones</a></li>
+                        <li class="menu-toggle-item"><a href="#contact">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
+        
         
         <main>
             <section id="about">
                 <h1>Quienes somos</h1>
                 
                 <p>
-                    VR3D es un estudio de ingeniería de Argentina, abocado a la elaboración de proyectos edilicios de arquitectura y obras civiles en general.
-                </p>
-                <p>
-                    Nuestro staff se compone de profesionales de distintas disciplinas, con la misión conjunta de contribuir a las mejoras individuales y colectivas en el uso racional y eficiente de la energía, ya sea a través de la construcción sustentable, de la generación distribuida de energía eléctrica o del aprovechamiento de la energía solar para calefacción y/o producción de agua caliente sanitaria.
+                    VR3D es un estudio de ingeniería de Argentina, abocado a la elaboración de proyectos edilicios de arquitectura y obras civiles en general. 
+                    Nuestro objetivo es contribuir a las mejoras individuales y colectivas en el uso racional y eficiente de la energía, ya sea a través de la construcción sustentable, de la generación distribuida de energía eléctrica o del aprovechamiento de la energía solar para calefacción y/o producción de agua caliente sanitaria.
                 </p>
             </section>
         
@@ -127,31 +122,30 @@
             <section id="products">
                 <h1>Productos</h1>
                 <div class="products-container">
-                    <div class="product-item">
+                    <div class="product-item" id="paneles">
                         <div class="product-image">
                             <p class="image-caption">Imagen Ilustrativa</p>
                         </div>
                         <h2>Paneles fotovoltaicos</h2>
                     </div>
-                    <div class="product-item">
+                    <div class="product-item" id="reguladores">
                         <div class="product-image">
                             <p class="image-caption">Imagen Ilustrativa</p>
                         </div>
                         <h2>Reguladores</h2>
                     </div>
-                    <div class="product-item">
+                    <div class="product-item" id="inversores">
                         <div class="product-image">
                             <p class="image-caption">Imagen Ilustrativa</p>
                         </div>
                         <h2>Inversores</h2>
                     </div>
-                    <div class="product-item">
+                    <div class="product-item" id="baterias">
                         <div class="product-image">
                             <p class="image-caption">Imagen Ilustrativa</p>
                         </div>
                         <h2>Baterías</h2>
                     </div>
-                    <!-- Puedes agregar más productos aquí -->
                 </div>
             </section>
             
@@ -159,7 +153,6 @@
                 <h1>Capacitaciones</h1>
                 <div class="content-container">
                     <p>Aquí aparecerán los próximos eventos, ya sean presenciales o virtuales. Suscríbase a nuestro newsletter llenando el formulario de contacto.</p>
-                    <p>ejemplo-->Acá puede ir otro texto que explique masoenos de que se trata o abajo pueden aparecer varias capacitaciones y demás.</p>
                     <a href="#contacto" class="btn">Saber más</a>
                 </div>
             </section>

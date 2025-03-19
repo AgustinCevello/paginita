@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <script src="java.js"></script>
     <meta charset="UTF-8">
@@ -60,23 +60,23 @@
                     <ul class="nav-menu">
                         <li class="menu-toggle-item"><a href="#about">Quiénes Somos</a></li>
                         <li class="dropdown menu-toggle-item">
-                            <a href="#services" class="nav-link">Servicios</a>
+                            <a href="services.html" class="nav-link">Servicios</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#Arquitectura">Arquitectura e ingeniería civil</a></li>
-                                <li><a href="#EnergiaSolar">Energía solar</a></li>
+                                <li><a href="services.html#Arquitectura">Arquitectura e ingeniería civil</a></li>
+                                <li><a href="services.html#EnergiaSolar">Energía solar</a></li>
                             </ul>
                         </li>
                         <li class="dropdown menu-toggle-item">
-                            <a href="#products">Productos</a>
+                            <a href="products.html">Productos</a>
                             <ul class="dropdown-menu">
-                                <li class="dropdown-item"><a href="#paneles">Paneles fotovoltaicos</a></li>
-                                <li class="dropdown-item"><a href="#reguladores">Reguladores</a></li>
-                                <li class="dropdown-item"><a href="#inversores">Inversores</a></li>
-                                <li class="dropdown-item"><a href="#baterias">Baterías</a></li>
+                                <li class="dropdown-item"><a href="products.html#paneles">Paneles fotovoltaicos</a></li>
+                                <li class="dropdown-item"><a href="products.html#reguladores">Reguladores</a></li>
+                                <li class="dropdown-item"><a href="products.html#inversores">Inversores</a></li>
+                                <li class="dropdown-item"><a href="products.html#baterias">Baterías</a></li>
                             </ul>
                         </li>           
-                        <li class="menu-toggle-item"><a href="#trainings">Capacitaciones</a></li>
-                        <li class="menu-toggle-item"><a href="#contact">Contacto</a></li>
+                        <li class="menu-toggle-item"><a href="trainings.html">Capacitaciones</a></li>
+                        <li class="menu-toggle-item"><a href="contact.html">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
@@ -91,107 +91,6 @@
                     VR3D es un estudio de ingeniería de Argentina, abocado a la elaboración de proyectos edilicios de arquitectura y obras civiles en general. 
                     Nuestro objetivo es contribuir a las mejoras individuales y colectivas en el uso racional y eficiente de la energía, ya sea a través de la construcción sustentable, de la generación distribuida de energía eléctrica o del aprovechamiento de la energía solar para calefacción y/o producción de agua caliente sanitaria.
                 </p>
-            </section>
-        
-            <section id="services">
-                <h1>Nuestros Servicios</h1>
-                <div class="services-container">
-                    <div class="service-column" id="Arquitectura">
-                        <h2>Arquitectura e ingeniería civil</h2>
-                        <ul>
-                            <li>Proyectos</li>
-                            <li>Planos</li>
-                            <li>Cálculos estructurales</li>
-                            <li>Dirección de obras</li>
-                            <li>Elaboración de ingeniería básica e ingeniería de detalle</li>
-                            <li>Renders, recorridos virtuales, experiencias inmersivas en realidad virtual</li>
-                        </ul>
-                    </div>
-                    <div class="service-column" id="EnergiaSolar">
-                        <h2>Energía solar</h2>
-                        <ul>
-                            <li>Venta de paneles fotovoltaicos, inversores, baterías, etc.</li>
-                            <li>Instalaciones fotovoltaicas industriales off-grid, on-grid e híbridas</li>
-                            <li>Venta e Instalación de paneles termosolares</li>
-                            <li>Bombas solares</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section id="products">
-                <h1>Productos</h1>
-                <div class="products-container">
-                    <div class="product-item" id="paneles">
-                        <div class="product-image">
-                            <p class="image-caption">Imagen Ilustrativa</p>
-                        </div>
-                        <h2>Paneles fotovoltaicos</h2>
-                    </div>
-                    <div class="product-item" id="reguladores">
-                        <div class="product-image">
-                            <p class="image-caption">Imagen Ilustrativa</p>
-                        </div>
-                        <h2>Reguladores</h2>
-                    </div>
-                    <div class="product-item" id="inversores">
-                        <div class="product-image">
-                            <p class="image-caption">Imagen Ilustrativa</p>
-                        </div>
-                        <h2>Inversores</h2>
-                    </div>
-                    <div class="product-item" id="baterias">
-                        <div class="product-image">
-                            <p class="image-caption">Imagen Ilustrativa</p>
-                        </div>
-                        <h2>Baterías</h2>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="trainings">
-                <h1>Capacitaciones</h1>
-                <div class="content-container">
-                    <p>Aquí aparecerán los próximos eventos, ya sean presenciales o virtuales. Suscríbase a nuestro newsletter llenando el formulario de contacto.</p>
-                    <a href="#contacto" class="btn">Saber más</a>
-                </div>
-            </section>
-            
-            <section id="contact" class="container">
-                <h1>Contacto</h1>
-                <form class="formularioContacto">
-                    <div class="form-group">
-                        <label for="name" class="elementosContacto required-field">Nombre</label>
-                        <input type="text" id="name" name="name" class="inputContacto" required placeholder="Tu nombre completo" maxlength="50" oninput="this.value = this.value.replace(/[^a-zA-Z ]/g, '')">
-                        <span class="error-message">Por favor ingresa tu nombre</span>
-                    </div>
-            
-                    <div class="form-group">
-                        <label for="email" class="elementosContacto required-field">E-mail</label>
-                        <input type="email" id="email" name="email" class="inputContacto" required placeholder="ejemplo@correo.com" oninput="this.value = this.value.replace(/[^a-zA-Z0-9@._%+-]/g, '')">
-                        <span class="error-message">Por favor ingresa un email válido</span>
-                    </div>
-            
-                    <div class="form-group">
-                        <label for="phone" class="elementosContacto">Celular</label>
-                        <input type="tel" id="phone" name="phone" class="inputContacto" placeholder="Tu número de contacto" maxlength="17" oninput="this.value = this.value.replace(/[^0-9+]/g, '')">
-                    </div>
-            
-                    <div class="form-group">
-                        <label for="reason" class="elementosContacto">Motivo de su consulta</label>
-                        <textarea id="reason" name="reason" rows="5" placeholder="Escribe aquí tu mensaje..." maxlength="300"></textarea>
-                    </div>
-            
-                    <button type="submit" class="botonContacto">
-                        Enviar
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="svgEnviar">
-                            <g fill="none">
-                                <path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/>
-                                <path fill="#fff" d="M20 4a2 2 0 0 1 1.995 1.85L22 6v12a2 2 0 0 1-1.85 1.995L20 20H4a2 2 0 0 1-1.995-1.85L2 18v-1h2v1h16V7.414l-6.94 6.94a1.5 1.5 0 0 1-2.007.103l-.114-.103L4 7.414V8H2V6a2 2 0 0 1 1.85-1.995L4 4zM6 13a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2zm12.586-7H5.414L12 12.586zM5 10a1 1 0 0 1 .117 1.993L5 12H2a1 1 0 0 1-.117-1.993L2 10z"/>
-                            </g>
-                        </svg>
-                    </button>
-                </form>
             </section>
             
             <!-- Vinculación del script -->
@@ -231,7 +130,8 @@
             </p>
         
             <p>&copy; 2025 VR3D - Todos los derechos reservados.</p>
-        </footer>           
+        </footer>
     </div>
 </body>
 </html>
+

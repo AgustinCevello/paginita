@@ -100,132 +100,162 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    //-------------------------navar responsive-------------------------
 
+
+
+
+    console.log("DOM cargado, inicializando menú"); // Para depuración
+    
+    // Seleccionar elementos necesarios
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const dropdowns = document.querySelectorAll('.dropdown');
     
-    // Toggle menu hamburguesa
-    menuToggle.addEventListener('click', function() {
+    // Verificar que los elementos existen
+    if (!menuToggle || !navMenu) {
+        console.error("No se encontraron elementos críticos del menú");
+        return;
+    }
+    
+    console.log("Elementos del menú encontrados"); // Para depuración
+    
+    // Toggle menu hamburguesa - usar click en lugar de addEventListener por compatibilidad
+    menuToggle.onclick = function(e) {
+        console.log("Clic en menú hamburguesa"); // Para depuración
+        e.preventDefault();
+        e.stopPropagation();
         navMenu.classList.toggle('active');
-    });
+        menuToggle.classList.toggle('active');
+    };
     
     // Manejar el despliegue de los submenús en móvil
     dropdowns.forEach(dropdown => {
         const dropdownLink = dropdown.querySelector('a');
         
-        dropdownLink.addEventListener('click', function(e) {
-            // Solo en vista móvil
-            if (window.innerWidth <= 992) {
-                e.preventDefault();
-                dropdown.classList.toggle('active');
-                
-                // Cerrar otros submenús
-                dropdowns.forEach(otherDropdown => {
-                    if (otherDropdown !== dropdown) {
-                        otherDropdown.classList.remove('active');
-                    }
-                });
-            }
-        });
+        if (dropdownLink) {
+            dropdownLink.onclick = function(e) {
+                // Solo en vista móvil
+                if (window.innerWidth <= 992) {
+                    console.log("Clic en dropdown"); // Para depuración
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    dropdown.classList.toggle('active');
+                    
+                    // Cerrar otros submenús
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+                }
+            };
+        }
     });
     
     // Cerrar menú al hacer clic fuera
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.navbar')) {
+    document.onclick = function(e) {
+        const isClickInsideMenu = e.target.closest('.nav-menu');
+        const isClickOnToggle = e.target.closest('.menu-toggle');
+        
+        if (!isClickInsideMenu && !isClickOnToggle) {
             navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
             dropdowns.forEach(dropdown => {
                 dropdown.classList.remove('active');
             });
         }
-    });
+    };
+    
+    // Evitar que los clics dentro del menú cierren el menú principal
+    if (navMenu) {
+        navMenu.onclick = function(e) {
+            e.stopPropagation();
+        };
+    }
     
     // Ajustar al cambiar el tamaño de la ventana
-    window.addEventListener('resize', function() {
+    window.onresize = function() {
         if (window.innerWidth > 992) {
             navMenu.classList.remove('active');
+            menuToggle.classList.remove('active');
             dropdowns.forEach(dropdown => {
                 dropdown.classList.remove('active');
             });
         }
+    };
+    
+    console.log("Inicialización del menú completa"); // Para depuración
+
+
+
+
+
+
+
+
+
+
+    /*
+    // Create and animate particles
+    document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('particles-container');
+    const particleCount = 50;
+    
+    // Create particles
+    for (let i = 0; i < particleCount; i++) {
+        createParticle();
+    }
+    
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        // Random position
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        particle.style.left = posX + 'vw';
+        particle.style.top = posY + 'vh';
+        
+        // Random size
+        const size = Math.random() * 3 + 2;
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        
+        // Random opacity
+        particle.style.opacity = Math.random() * 0.5 + 0.3;
+        
+        // Add to container
+        container.appendChild(particle);
+        
+        // Animate
+        animateParticle(particle);
+    }
+    
+    function animateParticle(particle) {
+        // Random animation duration
+        const duration = Math.random() * 30 + 15;
+        particle.style.animation = `float ${duration}s infinite ease-in-out`;
+        
+        // Recreate particle when animation ends to refresh position
+        setTimeout(() => {
+        particle.remove();
+        createParticle();
+        }, duration * 1000);
+    }
+    
+    // Create subtle parallax effect on scroll
+    window.addEventListener('scroll', function() {
+        const scrolled = window.scrollY;
+        const bubbles = document.querySelectorAll('.bubble');
+        
+        bubbles.forEach((bubble, index) => {
+        const speed = 0.1 + (index * 0.05);
+        const yPos = -(scrolled * speed);
+        bubble.style.transform = `translateY(${yPos}px)`;
+        });
     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Create and animate particles
-document.addEventListener('DOMContentLoaded', function() {
-  const container = document.getElementById('particles-container');
-  const particleCount = 50;
-  
-  // Create particles
-  for (let i = 0; i < particleCount; i++) {
-    createParticle();
-  }
-  
-  function createParticle() {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-    
-    // Random position
-    const posX = Math.random() * 100;
-    const posY = Math.random() * 100;
-    particle.style.left = posX + 'vw';
-    particle.style.top = posY + 'vh';
-    
-    // Random size
-    const size = Math.random() * 3 + 2;
-    particle.style.width = size + 'px';
-    particle.style.height = size + 'px';
-    
-    // Random opacity
-    particle.style.opacity = Math.random() * 0.5 + 0.3;
-    
-    // Add to container
-    container.appendChild(particle);
-    
-    // Animate
-    animateParticle(particle);
-  }
-  
-  function animateParticle(particle) {
-    // Random animation duration
-    const duration = Math.random() * 30 + 15;
-    particle.style.animation = `float ${duration}s infinite ease-in-out`;
-    
-    // Recreate particle when animation ends to refresh position
-    setTimeout(() => {
-      particle.remove();
-      createParticle();
-    }, duration * 1000);
-  }
-  
-  // Create subtle parallax effect on scroll
-  window.addEventListener('scroll', function() {
-    const scrolled = window.scrollY;
-    const bubbles = document.querySelectorAll('.bubble');
-    
-    bubbles.forEach((bubble, index) => {
-      const speed = 0.1 + (index * 0.05);
-      const yPos = -(scrolled * speed);
-      bubble.style.transform = `translateY(${yPos}px)`;
-    });
-  });
-});
+    });*/
 
 
 
